@@ -1,0 +1,32 @@
+.header{
+    background-color: cadetblue;
+    text-align: center;
+    height: 100px;
+    padding-top: 20px;
+}
+
+.mid-left{
+    float: left;
+    background-color: darkcyan;
+    width: 300px;
+    padding: 30px;
+    height: 300px;
+}
+
+.mid-right{
+    float: left;
+    background-color: deepskyblue;
+}
+.bottom{
+    text-align: center;
+    background-color: darkgrey;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
