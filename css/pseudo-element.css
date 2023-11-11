@@ -7,15 +7,53 @@ h1::before {
     height: 100px;
     background-color: chocolate;
   }
-  h1::after {
+h1::after {
     content: "aslan";
-  }
-  p::marker {
+}
+p::marker {
       unicode-bidi: isolate;
       font-variant-numeric: tabular-nums;
       text-transform: none;
       text-indent: 0px !important;
       text-align: start !important;
       text-align-last: start !important;
-  }
+}
   
+
+.header{
+    background-color: cadetblue;
+    text-align: center;
+    height: 100px;
+    padding-top: 20px;
+    
+    
+}
+
+.mid-left{
+    float: left;
+    background-color: darkcyan;
+    width: 300px;
+    padding: 30px;
+    height: 300px;
+}
+
+.mid-right{
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+    width: 1300px;  
+}
+.bottom{
+    text-align: center;
+    background-color: darkgrey;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
