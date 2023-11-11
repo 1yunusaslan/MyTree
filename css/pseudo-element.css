@@ -1,0 +1,21 @@
+h1::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;
+  }
+  h1::after {
+    content: "aslan";
+  }
+  p::marker {
+      unicode-bidi: isolate;
+      font-variant-numeric: tabular-nums;
+      text-transform: none;
+      text-indent: 0px !important;
+      text-align: start !important;
+      text-align-last: start !important;
+  }
+  

@@ -1,0 +1,15 @@
+.width{
+    width: 500px;
+    margin: auto;
+    border: 3px solid goldenrod;
+}
+.max_width{
+    max-width:  500px;
+    margin: auto;
+    border: 3px solid goldenrod;
+}
+.min_width{
+    min-width: 700px;
+    margin: auto;
+    border: 3px solid goldenrod;
+}

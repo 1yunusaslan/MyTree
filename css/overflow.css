@@ -1,0 +1,35 @@
+.visible{
+    width: 100px;
+    overflow: visible;
+    height: 50px;
+    background-color: cornflowerblue;
+}
+
+.hidden{
+    width: 100px;
+    overflow: hidden;
+    height: 50px;
+    background-color: cornflowerblue;
+}
+
+.scroll{
+    width: 100px;
+    overflow: scroll;
+    height: 150px;
+    background-color: cornflowerblue;
+}
+.auto{
+    width: 100px;
+    overflow: auto;
+    height: 150px;
+    background-color: cornflowerblue;
+}
+
+.x_y{
+    width: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    height: 150px;
+    background-color: cornflowerblue;
+}
