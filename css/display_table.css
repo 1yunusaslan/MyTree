@@ -41,3 +41,53 @@
     font-size: 25px;
     padding: 15px;
 }
+
+#line1:first-child{
+    background-color: darkgrey;
+
+}
+
+p:last-child{
+    color:indigo;
+}
+
+p:nth-child(3){
+    background-color: rgb(87, 87, 153);
+}
+
+:not(p){
+    color:white;
+}
+
+:root{
+    background-color: rgb(91, 148, 233)
+}
+
+a:visited{
+    color: black;
+}
+
+#email:invalid{
+    background-color: darkviolet;
+    
+}
+
+#password:valid{
+    background-color: chartreuse;
+}
+
+#email{
+    color: black;
+}
+
+input[type=text]:enabled{
+    background-color: darkgreen;
+}
+
+input[type=text]:disabled{
+    background-color: rgb(120, 160, 120);
+}
+
+
+
+
