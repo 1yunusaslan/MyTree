@@ -7,100 +7,94 @@
     <link rel="stylesheet" href="../../css/position.css">
 </head>
 <body>
-
-    <div>   
-        <div class="header">
-            <h1><a href="../../index.html">MyTree</a></h1>
-        </div>
-
-        <div class="mid">
-            <div class="mid-left">
-                <ul>
-                    <li><a href="../box_model/box_model.html">Box Model</a></li>
-                    <li><a href="../display/display.html">Display</a></li>
-                    <li><a href="../display_table/display_table.html">Display Table</a></li>
-                    <li><a href="../file-paths/file_path.html">File Path</a></li>
-                    <li><a href="../overflow/overflow.html">Overflow</a></li>
-                    <li><a href="../pseudo-element/pseudo-element.html">Pseudo Element</a></li>
-                    <li><a href="../z_index/z_index.html">Z-Index</a></li>
-                    <li><a href="../max_min_width/max_min_width.html">Max Min Width</a></li>
-                </ul>
-            </div>
-            <div class="mid-right">   
-
-                <h1>position : satic </h1>
     
-                <div class="static">
-                Yunus Emre Aslan
-                </div>
-            <!-- Sayfanın normal akışına pozisyonuna göre durur. Herhangi bi özel konum almaz. -->
-                
-              <h1>position : relative  </h1>
-            
-                <div class="relative">
-                Yunus Emre Aslan
-                </div>
-            <!-- Soldan sağdan alttan üstten verilen  değerlere  göre konumu değişir.  -->
-            
-                <h1>position : fixed  </h1>
-            
-                    <div class="fixed">
-                    HER HAKKI SAKLIDIR
-                    </div>
-                <!-- Sayfada belirlenen konuma sabitler. Sayfada scroll yapsan bile belirlenen konumda kalır. #### display: block işe yaramıyor.  -->
-            
-                <h1>position : absolute  </h1>
-                    <div class="relative_2"> 
-                        YEA
-                        <div class="absolute">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis sed maiores illum obcaecati aut nihil placeat, similique aperiam alias quo dolores ex asperiores ab laborum ipsum maxime iste incidunt? Placeat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nam nisi saepe suscipit nihil hic magnam quae, officia quod deserunt veritatis ipsum provident voluptas sunt corrupti, consequuntur obcaecati velit laudantium.lorem
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab ut vel eum, iste consequuntur odio nulla eveniet nesciunt saepe eaque illum rem porro modi aspernatur atque. Laboriosam totam ut tenetur?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequatur quae distinctio quia amet minima sequi corrupti accusantium! Doloremque aliquid distinctio officiis architecto beatae ipsam velit quisquam quo animi sed!
-                        </div>
-                    </div>
-                    
-                 <!-- bir pozisyonun içerisinde farklı bir pozisyon ekleyebiliriz. #right vermeyi dene ve sor. margin-right dene ver sor. --> 
-                 
-                 <h1>position : sticky  </h1>
-                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam velit in ullam quasi doloribus fugit, temporibus facilis laborum rem beatae libero. Porro autem corporis earum assumenda, rem perferendis? Tenetur, aut.</p>
-                 <div class="sticky">
-                 Yunus Emre 
-                 </div>
-                 <div style="padding-bottom: 1000px;">
-                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam velit in ullam quasi doloribus fugit, temporibus facilis laborum rem beatae libero. Porro autem corporis earum assumenda, rem perferendis? Tenetur, aut.</p>
-                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam velit in ullam quasi doloribus fugit, temporibus facilis laborum rem beatae libero. Porro autem corporis earum assumenda, rem perferendis? Tenetur, aut.</p>
-                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam velit in ullam quasi doloribus fugit, temporibus facilis laborum rem beatae libero. Porro autem corporis earum assumenda, rem perferendis? Tenetur, aut.</p>
-            
-                 </div>
-                 
-                 <!-- sayfanın belirli bi kısmında sabit kalır scroll uygulandığında en üstte kalır genelde menülerde kullanılır. --> 
-            
-            
-                 <!--fixed ile sticky arasındaki fark. sticky belirlenen top,left vb değerlere geldiğde ve scroll yapıldığında yapışkan özelliği kullanır. 
-                     fixed ise en başta verilen değerde sabit kalır scroll yapılsa bile sabit kalır. -->
-
-            </div>
-        </div>
+    <table class="table" >
+        <tbody>
+            <tr class="tr_header">
+                <td colspan="2" class="td_header"><h1><a href="../../index.html">MyTree</a></h1></td> 
+            </tr>
+            <tr class="left">
+                <td class="menu">
+                    <ul>
+                        <li><a href="../box_model/box_model.html">Box Model</a></li>
+                        <li><a href="../display/display.html">Display</a></li>
+                        <li><a href="../display_table/display_table.html">Display Table</a></li>
+                        <li><a href="../file-paths/file_path.html">File Path</a></li>
+                        <li><a href="../position/position.html">Position</a></li>
+                        <li><a href="../pseudo-element/pseudo-element.html">Pseudo Element</a></li>
+                        <li><a href="../z_index/z_index.html">Z-Index</a></li>
+                        <li><a href="../max_min_width/max_min_width.html">Max Min Width</a></li>
+                        <li><a href="../css_variables/css_variables.html">CSS Variables</a></li>
+                        <li><a href="../css_combinators/css_combinators.html">CSS Combinators</a></li>
+                    </ul>
+    
+                </td>
+                <td class="content">
+                    <div class="content_stabilizer" >
+                        
+                    <h1>position : satic </h1>
         
-
-        <div class="bottom">
-            <H1>Tüm hakları saklıdır.</H1>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    <div class="static">
+                    Yunus Emre Aslan
+                    </div>
+                <!-- Sayfanın normal akışına pozisyonuna göre durur. Herhangi bi özel konum almaz. -->
+                    
+                  <h1>position : relative  </h1>
+                
+                    <div class="relative">
+                    Yunus Emre Aslan
+                    </div>
+                <!-- Soldan sağdan alttan üstten verilen  değerlere  göre konumu değişir.  -->
+                
+                    <h1>position : fixed  </h1>
+                
+                        <div class="fixed">
+                        HER HAKKI SAKLIDIR
+                        </div>
+                    <!-- Sayfada belirlenen konuma sabitler. Sayfada scroll yapsan bile belirlenen konumda kalır. #### display: block işe yaramıyor.  -->
+                
+                    <h1>position : absolute  </h1>
+                        <div class="relative_2"> 
+                            YEA
+                            <div class="absolute">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis sed maiores illum obcaecati aut nihil placeat, similique aperiam alias quo dolores ex asperiores ab laborum ipsum maxime iste incidunt? Placeat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nam nisi saepe suscipit nihil hic magnam quae, officia quod deserunt veritatis ipsum provident voluptas sunt corrupti, consequuntur obcaecati velit laudantium.lorem
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab ut vel eum, iste consequuntur odio nulla eveniet nesciunt saepe eaque illum rem porro modi aspernatur atque. Laboriosam totam ut tenetur?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequatur quae distinctio quia amet minima sequi corrupti accusantium! Doloremque aliquid distinctio officiis architecto beatae ipsam velit quisquam quo animi sed!
+                            </div>
+                        </div>
+                        
+                     <!-- bir pozisyonun içerisinde farklı bir pozisyon ekleyebiliriz. #right vermeyi dene ve sor. margin-right dene ver sor. --> 
+                     
+                     <h1>position : sticky  </h1>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam velit in ullam quasi doloribus fugit, temporibus facilis laborum rem beatae libero. Porro autem corporis earum assumenda, rem perferendis? Tenetur, aut.</p>
+                     <div class="sticky">
+                     Yunus Emre 
+                     </div>
+                     <div style="padding-bottom: 1000px;">
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam velit in ullam quasi doloribus fugit, temporibus facilis laborum rem beatae libero. Porro autem corporis earum assumenda, rem perferendis? Tenetur, aut.</p>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam velit in ullam quasi doloribus fugit, temporibus facilis laborum rem beatae libero. Porro autem corporis earum assumenda, rem perferendis? Tenetur, aut.</p>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam velit in ullam quasi doloribus fugit, temporibus facilis laborum rem beatae libero. Porro autem corporis earum assumenda, rem perferendis? Tenetur, aut.</p>
+                
+                     </div>
+                     
+                     <!-- sayfanın belirli bi kısmında sabit kalır scroll uygulandığında en üstte kalır genelde menülerde kullanılır. --> 
+                
+                
+                     <!--fixed ile sticky arasındaki fark. sticky belirlenen top,left vb değerlere geldiğde ve scroll yapıldığında yapışkan özelliği kullanır. 
+                         fixed ise en başta verilen değerde sabit kalır scroll yapılsa bile sabit kalır. -->
     
- 
+                    </div>
+                </td>
+            </tr>
+    
+            <tr class="tr_bottom">
+                <td colspan="2" class="td_bottom"><p> Tüm Hakkı Saklıdır. </p></td> 
+            </tr>
+        </tbody>
+    </table>
+    
+
 </body>
 </html>
+
+

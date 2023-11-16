@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css Combinators</title>
+    <link rel="stylesheet" href="../../css/css_combinators.css">
+</head>
+<body>
+    
+<table class="table" >
+    <tbody>
+        <tr class="tr_header">
+            <td colspan="2" class="td_header"><h1><a href="../../index.html">MyTree</a></h1></td> 
+        </tr>
+        <tr class="left">
+            <td class="menu">
+                <ul>
+                    <li><a href="../box_model/box_model.html">Box Model</a></li>
+                    <li><a href="../display/display.html">Display</a></li>
+                    <li><a href="../display_table/display_table.html">Display Table</a></li>
+                    <li><a href="../file-paths/file_path.html">File Path</a></li>
+                    <li><a href="../overflow/overflow.html">Overflow</a></li>
+                    <li><a href="../position/position.html">Position</a></li>
+                    <li><a href="../pseudo-element/pseudo-element.html">Pseudo Element</a></li>
+                    <li><a href="../z_index/z_index.html">Z-Index</a></li>
+                    <li><a href="../max_min_width/max_min_width.html">Max Min Width</a></li>
+                    <li><a href="../css_variables/css_variables.html">CSS Variables</a></li>
+                </ul>
+
+            </td>
+            <td class="content">
+                <div class="content_stabilizer" >
+                    <h1>CSS Combinators</h1>
+                        <p>A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.</p>
+                        <p>There are four different combinators in CSS:</p>
+                        <div>
+                            <ul>
+                                <li>descendant selector (space)</li>
+                                <li>child selector (>)</li>
+                                <li>adjacent sibling selector (+)</li>
+                                <li>general sibling selector (~)</li>
+                            </ul>
+                        </div>
+                        <div class="descendant_selector">
+                            <h2>Descendant Selector</h2>
+                            <p> Paragraf 1</p>
+                            <p> Paragraf 2</p>
+                            <section><p>Paragraf 3</p></section>
+                            <section>Paragraf 4</section>
+                        </div>
+                        <!--Divin içerisindeki bulunan çocuk,torun vb hepsini içine bulunan "p" yi alır.-->
+                        <div class="child_selector">
+                            <h2>Child Selector</h2>
+                            <p> Paragraf 1</p>
+                            <p> Paragraf 2</p>
+                            <section><p>Paragraf 3</p></section>
+                            <section>Paragraf 4</section>
+                        </div>
+                        <!--Divin içerisindeki sadece "p" olanları alır.-->
+                        <div class="adjacent_sibling_selector">
+                            <h2>Adjacent Sibling Selector</h2>
+                            <div>
+                                <p> Paragraf 1</p>
+                            </div>
+                            <p> Paragraf 2</p>
+                            <div>
+                                <p> Paragraf 3</p>
+                            </div>
+                            <p> Paragraf 4</p>
+                            <p> Paragraf 5</p>
+                            <p> Paragraf 6</p>
+                        </div>
+                        <!--Divden sonraki en yakın "p" yi alır.-->
+                        <div class="general_sibling_selector">
+                            <h2>General Sibling Selector</h2>
+                            <p> Paragraf 1</p>
+                            <div>
+                                <p> Paragraf 2</p>
+                            </div>
+                            <section><p> Paragraf hariç metin.</p></section>
+                            <p>Paragraf 3</p>
+                            <p>Paragraf 4</p>
+                        </div>
+                        <!--Divden sonraki torun olmayan bütün "p" leri alır.-->
+
+                </div>
+            </td>
+        </tr>
+
+        <tr class="tr_bottom">
+            <td colspan="2" class="td_bottom"><p> Tüm Hakkı Saklıdır. </p></td> 
+        </tr>
+    </tbody>
+</table>
+    
+    
+</body>
+</html>
+
+

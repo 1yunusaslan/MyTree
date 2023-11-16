@@ -79,24 +79,18 @@ a:hover{
     color: #791c12;
 }
 
-.td_header::before {
-    content: "";
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    width: 100px;
-    height: 100px;
-    background-color: chocolate;
-  }
-h1::after {
-    content: "aslan";
+.descendant_selector p {
+    background-color: rgb(204, 204, 138);
 }
-p::marker {
-      unicode-bidi: isolate;
-      font-variant-numeric: tabular-nums;
-      text-transform: none;
-      text-indent: 0px !important;
-      text-align: start !important;
-      text-align-last: start !important;
+.child_selector > p {
+    background-color: rgb(204, 204, 138);
 }
-  
+.adjacent_sibling_selector div + p {
+    background-color: rgb(204, 204, 138);
+}
+.general_sibling_selector div ~ p {
+    background-color: rgb(204, 204, 138);
+}
+
+
+
