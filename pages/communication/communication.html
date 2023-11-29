@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <div class="flex-header">
-            <div><h1><a href="../../index.html">MyTree</a></h1></div>
+        <div class="flex-header col-sm-12 col-md-12 col-lg-12 ">
+            <div class=""><h1><a href="../../index.html">MyTree</a></h1></div>
         </div>
-        <div class="flex-menu">
-            <ul>
+        <div class="flex-menu ">
+            <ul class="col-sm-12 col-md-6 col-lg-12">
                 <li><a href="../box_model/box_model.html">Box Model</a></li>
                 <li><a href="../display/display.html">Display</a></li>
                 <li><a href="../file-paths/file_path.html">File Path</a></li>
@@ -27,29 +27,28 @@
         </div>
         <div class="flex-content">
             <div class="flex-content-left">
-                <div class="f1">
+                <div class="f1 col-sm-12 col-md-6 col-lg-6">
                     <label for="">Adınız :</label>
                     <label for="">Soyadınız :</label>
                     <label for="">Telefon Numaranız :</label>
                     <label for="">Mail Adresiniz :</label>
                     <label for="">Mesajınız :</label>
-                    
                 </div>
             </div>
             <div class="flex-content-right">
-                <div class="f2">
-                    <form action="">
+                <div class="f2  col-sm-12 col-md-6 col-lg-6">
+                    <form action="#" method="get">
                         <input type="text" placeholder="Adınızı giriniz" required minlength="3">
                         <input type="text" placeholder="Soyadınızı giriniz" required minlength="3">
                         <input type="number" placeholder="Telefon numaranızı giriniz">
                         <input type="email" placeholder="Mail adresinizi giriniz" required>
-                        <textarea name="message" id="txarea" cols="20" rows="5" required maxlength="150" >Mesajınızı giriniz</textarea>
+                        <textarea name="message" id="txarea" cols="20" rows="5" maxlength="150" required placeholder="Mesajınızı yazınız" ></textarea>
                         <input type="submit" value="Gönder">
                     </form>
                 </div>
             </div>
         </div>
-        <div class="flex-bottom">
+        <div class="flex-bottom col-sm-12 col-md-12 col-lg-12">
             <div><h6>Tüm hakları saklıdır.</h6></div>
         </div>
     </div>
