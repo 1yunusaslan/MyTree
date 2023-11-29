@@ -21,7 +21,24 @@ body{
 }
 .flex-header a{
     color: white;
+    text-decoration: none;
 }
+.flex-menu ul{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: center;  
+    
+}
+.flex-menu li{
+    list-style-type: none;
+    margin: 10px;
+    color:rgb(93, 93, 170);
+    text-decoration: none;
+    border: 1px solid purple;
+    padding: 5px;
+}
+
 .flex-content{
     display: flex;
     flex-direction: row;
@@ -85,6 +102,13 @@ body{
 .flex-bottom h6{
     color: white;
 }
+a{
+    text-decoration:none;
+}
+li a:hover{
+    color: blueviolet;
+}
+
 
 
 
