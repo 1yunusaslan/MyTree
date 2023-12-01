@@ -46,14 +46,19 @@ body{
 
 .flex-content div {
     width: 100%;
-    background-color: rgb(74, 74, 90);
+    
     height: 900px;
+}
+.flex-content-left{
+    order: 2;
 }
 
 .f1 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    order: 2;
+    
 }
 .f1 label {
     margin: 10px;
@@ -67,20 +72,33 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    order: 1;
 }
 
 .f2 input {
     margin: 10px;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid white;
     padding: 9px;
     width: 25%;
-    
+    background-color: rgb(74, 74, 90) ;
+    color: white;
+}
+
+.f2 input:hover{
+    border-color:rgb(93, 93, 170);
 }
 
 #txarea{
     margin-left: 10px;
     margin-top: 15px;
     width: 25%;
+    background-color: rgb(74, 74, 90) ;
+    border-color: white;
+
+}
+
+#txarea:hover{
+    border-color:rgb(93, 93, 170);
 }
 
 .flex-bottom{
@@ -102,11 +120,18 @@ body{
 .flex-bottom h6{
     color: white;
 }
+
 a{
     text-decoration:none;
 }
+
 li a:hover{
     color: blueviolet;
+}
+
+::placeholder{
+    color: white;
+    opacity: 0.5;
 }
 
 
@@ -129,7 +154,10 @@ li a:hover{
         flex-direction: column;
     }
    
-
+    .flex-content-left{
+       order:  1;
+    }
+    
    /*
     .flex-menu ul{
         display: flex;
