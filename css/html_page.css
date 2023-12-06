@@ -57,12 +57,15 @@
     width: 150px;
 }
 
+.content{
+    height: auto;
+}
 .content-right{
     display: flex;
     flex-direction: column;
     background-color:rgb(124, 124, 124);
     padding: 10px;
-    height: auto;
+    
 }
 
 .content-right p {

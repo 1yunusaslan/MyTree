@@ -2,8 +2,8 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>CSS VARIABLES</title>
-    <link rel="stylesheet" href="../../css/css_variables.css">
+    <title>MyTree</title>
+    <link rel="stylesheet" href="../../../css/box_model_css.css">
 </head>
 <body>
     <table class="table" >
@@ -14,7 +14,6 @@
             <tr class="left">
                 <td class="menu">
                     <ul>
-                        <li><a href="../box_model/box_model.html">Box Model</a></li>
                         <li><a href="../display/display.html">Display</a></li>
                         <li><a href="../display_table/display_table.html">Display Table</a></li>
                         <li><a href="../file-paths/file_path.html">File Path</a></li>
@@ -23,26 +22,46 @@
                         <li><a href="../pseudo-element/pseudo-element.html">Pseudo Element</a></li>
                         <li><a href="../z_index/z_index.html">Z-Index</a></li>
                         <li><a href="../max_min_width/max_min_width.html">Max Min Width</a></li>
+                        <li><a href="../css_variables/css_variables.html">CSS Variables</a></li>
                         <li><a href="../css_combinators/css_combinators.html">CSS Combinators</a></li>
                     </ul>
                 </td>
                 <td class="content">
                     <div class="content_stabilizer" >
-                        <h1>CSS Variables</h1>
-                        <p>The var() function is used to insert the value of a CSS variable.</p>
-                        <p>CSS variables have access to the DOM, which means that you can create variables with local or global scope, change the variables with JavaScript, and change the variables based on media queries.</p>
-                        <p>A good way to use CSS variables is when it comes to the colors of your design. Instead of copy and paste the same colors over and over again, you can place them in variables.</p>
+                        <div class="margin">
+                            Margin
+                            <div class="border">
+                                Border
+                                <div class="padding">   
+                                    Padding
+                                    <div class="contents">
+                                        Content
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+        
+                      <div>
+                        <p>
+                            Explanation of the different parts:
+                            <ul>
+                                <li>Content - The content of the box, where text and images appear</li>
+                                <li>Padding - Clears an area around the content. The padding is transparent</li>
+                                <li>Border - A border that goes around the padding and content</li>
+                                <li>Margin - Clears an area outside the border. The margin is transparent</li>
+                            </ul>
+                        </p>
+                        <p>The box model allows us to add a border around elements, and to define space between elements. </p>
+                      </div>
                     </div>
                 </td>
             </tr>
-    
+
             <tr class="tr_bottom">
                 <td colspan="2" class="td_bottom"><p> Tüm Hakkı Saklıdır. </p></td> 
             </tr>
         </tbody>
-    </table> 
-
+    </table>
+      
 </body>
 </html>
-
-
