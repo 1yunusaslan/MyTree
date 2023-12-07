@@ -40,7 +40,8 @@
 .content-flex{
     display: flex;
     flex-direction: row;
-    height: auto;
+    height: 1500px;
+
 }
 
 .content-left{
@@ -96,6 +97,19 @@ a:hover{
 
 
 
+table {
+    width: 100%;
+   border-collapse:collapse;
+  }
+
+  td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+
+
+
+
 @media only screen and (min-width: 600px) {
     
 
@@ -129,7 +143,7 @@ a:hover{
         flex-direction: row;
     }
     .content-flex{
-        height: 1000px;
+        height: 1500px;
     
     }
 
@@ -146,3 +160,9 @@ a:hover{
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;}
   }
+
+
+
+
+
+

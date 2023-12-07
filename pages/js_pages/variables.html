@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <link rel="stylesheet" href="../../css/variables.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header col-s-12 col-m-12">
+            <div class="header-flex">
+                <a href="../../index.html"><h1>MyTree</h1></a> 
+            </div>
+        </div>
+        <div class="menu col-s-12 col-m-12">
+            <div class="menu-flex">
+                <ul>
+                    <li><a href="/html_page.html">HTML</a></li>
+                    <li><a href="/index.html">CSS</a></li>
+                    <li><a href="/js.html">JS</a></li>
+                    <li><a href="/english.html">ENG</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-flex">
+                <div class="content-left col-s-6 col-m-2" >
+                    <ul>
+                        <li><a href="/pages/js_pages/variables.html">Variables</a></li>
+                        <li><a href="/pages/js_pages/arithmetic.html">Arithmetic</a></li>
+                        <li><a href="/pages/js_pages/assignment.html">Assignment</a></li>
+                        <li><a href="/pages/js_pages/data_types.html">Data Types</a></li>
+                        <li><a href="/pages/js_pages/operators.html">Operators</a></li>
+                    </ul>
+                </div>
+                <div class="content-right col-s-6 col-m-10" >
+                    <div>
+                        <h1 id="myFirst"></h1>
+                        <h3>VAR</h3>
+                        <p>String, number</p>
+                        <p>Var y = 10;</p>
+                        <p>Var y = 20;</p>
+                        <p>Aynı değişkeni bir daha tanımlamak sorun oluşturmaz. </p>
+                        <h3>LET</h3>
+                        <p>Blok içerisinde kullanılır.</p>
+                        <p>let x = 10;</p>
+                        <p>let x = 20;</p>
+                        <p>Aynı değişkeni bir daha tanımlamak sorun yaratır.</p>
+                        <h3>CONST</h3>
+                        <p>Sabit, değişmeyen, belirli değer içerir.Örn: pi sayısı</p>
+                        <p>Daha sonra değiştirilemez. Blok içerisinde çalışır.</p>
+
+                        <h3>Değişkenler ve Sonuçları</h3>
+                        <p id="v"></p>
+                        <p id="l"></p>
+                        <p id="c"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="bottom col-s-12 col-m-12">
+            <div class="bottom-flex">
+                <h3>Her hakkı saklıdır.</h3>
+            </div>
+        </div>
+    </div>  
+
+    <script>
+        document.getElementById("myFirst").innerHTML = "My first script code."
+        var y =10;
+        var y = 20;
+        var b = 5 ;
+        var sonuc = y + b;
+        document.getElementById("v").innerHTML=sonuc;
+
+        let x = 10;
+        let a = 2;
+        let snc = x + a + " " +"araba";
+        document.getElementById("l").innerHTML=snc;
+
+        const pi = 3.14;
+        document.getElementById("c").innerHTML=pi;
+    </script>
+</body>
+</html>

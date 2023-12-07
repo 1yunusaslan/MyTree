@@ -40,7 +40,7 @@
 .content-flex{
     display: flex;
     flex-direction: row;
-    height: auto;
+    height: 1500px;
 }
 
 .content-left{
@@ -57,15 +57,12 @@
     width: 150px;
 }
 
-.content{
-    height: auto;
-}
 .content-right{
     display: flex;
     flex-direction: column;
     background-color:rgb(124, 124, 124);
     padding: 10px;
-    
+    height: auto;
 }
 
 .content-right p {
@@ -93,8 +90,6 @@ a{
 a:hover{
     color: blue;
 }
-
-
 
 @media only screen and (min-width: 600px) {
     
