@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Types</title>
-    <link rel="stylesheet" href="../../css/data_types.css">
+    <title>Game</title>
+    <link rel="stylesheet" href="../../css/game.css">
 </head>
 <body>
     <div class="container">
         <div class="header col-s-12 col-m-12">
             <div class="header-flex">
-                <a href="../../index.html"><h1>MyTree</h1></a> 
+                <a href="index.html"><h1>MyTree</h1></a> 
             </div>
         </div>
         <div class="menu col-s-12 col-m-12">
@@ -35,16 +35,17 @@
                         <li><a href="/pages/js_pages/hosting.html">Hosting</a></li>
                         <li><a href="/pages/js_pages/game.html">Game</a></li>
                         <li><a href="/pages/js_pages/pri_ref_values.html">Primitive vs. Reference Values</a></li>
+                        
                     </ul>
                 </div>
                 <div class="content-right col-s-6 col-m-10" >
                     <div>
-                        <h1>Data Tipleri</h1>
-                        <p id="sonuc"></p>
-                        <p id="sonuc2"></p>
-                        <p id="sonuc3"></p>
-                        <p id="sonuc4"></p>
-                        <p id="sonuc5"></p>
+                       <h3>Arthur</h3>
+                       <p id="arthur"></p>
+                       <h3>Dutch</h3>
+                       <p id="dutch"></p>
+                       <h3>Erol</h3>
+                       <p id="erol"></p>
                     </div>
                 </div>
             </div>
@@ -54,25 +55,9 @@
                 <h3>Her hakkı saklıdır.</h3>
             </div>
         </div>
-    </div>
+    </div>  
 
-    <script>
-        const kisi = {
-            name:"Yunus",
-            surname:"Aslan",
-            age:22
-        };
-        document.getElementById("sonuc").innerHTML= "İsmi="+kisi.name + " Soyismi= " + kisi.surname + " Yaşı= " + kisi.age;
-        
-        var x = 10;
-        document.getElementById("sonuc2").innerHTML= "X'in data tipi= " + typeof(x); 
-
-        const araba = ["Audi","Volvo"];
-        let araba2 = ["Audi","BMW"];
-        document.getElementById("sonuc3").innerHTML=araba[0];
-        document.getElementById("sonuc4").innerHTML=araba[1];
-
+    <script src="./js/game.js">
     </script>
-    
 </body>
 </html>

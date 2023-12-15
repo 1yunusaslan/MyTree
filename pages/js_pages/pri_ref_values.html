@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Types</title>
-    <link rel="stylesheet" href="../../css/data_types.css">
+    <title>Primitive vs. Reference Values</title>
+    <link rel="stylesheet" href="../../css/pri_ref.css">
 </head>
 <body>
     <div class="container">
         <div class="header col-s-12 col-m-12">
             <div class="header-flex">
-                <a href="../../index.html"><h1>MyTree</h1></a> 
+                <a href="index.html"><h1>MyTree</h1></a> 
             </div>
         </div>
         <div class="menu col-s-12 col-m-12">
@@ -39,12 +39,12 @@
                 </div>
                 <div class="content-right col-s-6 col-m-10" >
                     <div>
-                        <h1>Data Tipleri</h1>
-                        <p id="sonuc"></p>
-                        <p id="sonuc2"></p>
-                        <p id="sonuc3"></p>
-                        <p id="sonuc4"></p>
-                        <p id="sonuc5"></p>
+                    <h1>Primitive vs. Reference Values</h1>
+                    <h3>Stack</h3>
+                    <p>Kısa ömürlü, küçük boyutlu verileri saklamak için kullanılır. İşlevi hızlıdır. Örn: Number, string, boolean vb.</p>
+                    <h3>Heap</h3>
+                    <p>Uzun ömürlü ve yüksek boyutlu verileri saklamak için kullanılır. Bellek boyutu programcanının kontrolündendir. Örn: Nesne(Obj), Dizi </p>
+                        
                     </div>
                 </div>
             </div>
@@ -54,25 +54,10 @@
                 <h3>Her hakkı saklıdır.</h3>
             </div>
         </div>
-    </div>
-
-    <script>
-        const kisi = {
-            name:"Yunus",
-            surname:"Aslan",
-            age:22
-        };
-        document.getElementById("sonuc").innerHTML= "İsmi="+kisi.name + " Soyismi= " + kisi.surname + " Yaşı= " + kisi.age;
-        
-        var x = 10;
-        document.getElementById("sonuc2").innerHTML= "X'in data tipi= " + typeof(x); 
-
-        const araba = ["Audi","Volvo"];
-        let araba2 = ["Audi","BMW"];
-        document.getElementById("sonuc3").innerHTML=araba[0];
-        document.getElementById("sonuc4").innerHTML=araba[1];
+    </div> 
+    
+    <script src="./js/pri_ref.js">
 
     </script>
-    
 </body>
 </html>
