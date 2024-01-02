@@ -1,3 +1,4 @@
+
 let arthur = {
     name : "Arthur",
     age : 36,
@@ -50,6 +51,7 @@ let eroltas= {
         return this.name + " =" + "Benim yaşım " + this.age; 
     } 
 };
+
 
 
 
