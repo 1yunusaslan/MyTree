@@ -1,368 +1,389 @@
-const dizi = ["bir", "iki", "dsfds"]; //iterable
+// const dizi = ["bir", "iki", "dsfds"]; //iterable
 
-// for(kactanbaslayacak, bitissarti, her_adimda_tekrar_eden_islem){
-//     //işlemlerimiz
-// }
+// // for(kactanbaslayacak, bitissarti, her_adimda_tekrar_eden_islem){
+// //     //işlemlerimiz
+// // }
 
-// for (let index = 0; index < dizi.length; index++) {
-//   dizi[index];
-// }
+// // for (let index = 0; index < dizi.length; index++) {
+// //   dizi[index];
+// // }
 
-const revolver = {
-  power: 50,
-};
+// const revolver = {
+//   power: 50,
+// };
 
-var arthur = {
-  name: "arthur",
-  friends: [],
-  enemies: [],
-  max_hp: 100,
-  hp: 100,
-  power: 20,
-  gun: revolver,
-  armor: 20,
-  dead_number :true,
-  attack_number : 0,
-  greet: function (friend) {
-    console.log("Selam sana " + friend.name);
-    this.friends.push(friend.name);
-  },
-  attack: function (enemy) {
-      enemy.hp = (enemy.hp + enemy.armor) - (this.power + this.gun.power);
-      this.hp = (this.hp+this.armor) - (enemy.power+enemy.gun.power);
-      //enemy.attack(this);
-    if(enemy.hp<=0 && this.dead_number==true){
-        console.log(enemy.name+"Öldün");
-        this.dead_number=false;
-    }
-    // Saldıran kişiyi kontrol et, arkadaş ise uyar,
-    
-    else if(this.friends.find(
-      function(eleman,index){
-        return eleman.name == enemy.name;
-      }
-    ))
-    {
-      this.attack_number++;
-      if(this.attack_number==1){
-        console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
-      }
-      else if (this.attack_number==2){
-        console.log("Seni arkadaşlıktan çıkarıyorum.");
-        this.friends.pop();
-      } 
-    }
-    // Eğer saldırıya devam etmezse saldıran kişi özür diler.
-    else{
-      enemy.help();
-    }
-  },
-  help: function () {
-    if (this.hp > 0 && this.hp <= 25) {
-      console.log("Yardım edin yaralandım.");
-    }
-  },
-};
+// var arthur = {
+//   name: "arthur",
+//   friends: [],
+//   enemies: [],
+//   max_hp: 100,
+//   hp: 100,
+//   power: 20,
+//   gun: revolver,
+//   armor: 20,
+//   dead_number: true,
+//   attack_number: 0,
+//   greet: function (friend) {
+//     console.log("Selam sana " + friend.name);
+//     this.friends.push(friend.name);
+//   },
+//   attack: function (enemy) {
+//     enemy.hp = enemy.hp + enemy.armor - (this.power + this.gun.power);
+//     this.hp = this.hp + this.armor - (enemy.power + enemy.gun.power);
+//     //enemy.attack(this);
+//     if (enemy.hp <= 0 && this.dead_number == true) {
+//       console.log(enemy.name + "Öldün");
+//       this.dead_number = false;
+//     }
+//     // Saldıran kişiyi kontrol et, arkadaş ise uyar,
+//     else if (
+//       this.friends.find(function (eleman, index) {
+//         return eleman.name == enemy.name;
+//       })
+//     ) {
+//       this.attack_number++;
+//       if (this.attack_number == 1) {
+//         console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
+//       } else if (this.attack_number == 2) {
+//         console.log("Seni arkadaşlıktan çıkarıyorum.");
+//         this.friends.pop();
+//       }
+//     }
+//     // Eğer saldırıya devam etmezse saldıran kişi özür diler.
+//     else {
+//       enemy.help();
+//     }
+//   },
+//   help: function () {
+//     if (this.hp > 0 && this.hp <= 25) {
+//       console.log("Yardım edin yaralandım.");
+//     }
+//   },
+// };
 
-var dutch = {
-  name: "dutch",
-  friends: [],
-  max_hp: 10,
-  hp: 85,
-  power: 15,
-  enemies: [messi, arthur, jhon],
-  gun: revolver,
-  armor: 20,
-  dead_number :1,
-  greet: function (friend) {
-    console.log("Selam sana " + friend.name);
-    this.friends.push(friend.name);
-  },
-  attack: function (enemy) {
-    enemy.hp = (enemy.hp + enemy.armor) - (this.power + this.gun.power);
-    this.hp = (this.hp+this.armor) - (enemy.power+enemy.gun.power);
-    if (enemy.hp <= 0 && this.dead_number==true) {
-      console.log(enemy.name + "Öldün");
-      this.dead_number=false;
-      
-    } 
-    else if(this.friends.find(
-      function(eleman,index){
-        return eleman.name == enemy.name;
-      }
-    ))
-    {
-      this.attack_number++;
-      if(this.attack_number==1){
-        console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
-      }
-      else if (this.attack_number==2){
-        console.log("Seni arkadaşlıktan çıkarıyorum.");
-        this.friends.pop();
-      } 
-    }
-    else {
-      enemy.help();
-    }
-  },
-  help: function () {
-    if (this.hp > 0 && this.hp <= 25) {
-      console.log("Yardım edin yaralandım.");
-    }
-  },
-};
+// var dutch = {
+//   name: "dutch",
+//   friends: [],
+//   max_hp: 10,
+//   hp: 85,
+//   power: 15,
+//   enemies: [messi, arthur, jhon],
+//   gun: revolver,
+//   armor: 20,
+//   dead_number: 1,
+//   greet: function (friend) {
+//     console.log("Selam sana " + friend.name);
+//     this.friends.push(friend.name);
+//   },
+//   attack: function (enemy) {
+//     enemy.hp = enemy.hp + enemy.armor - (this.power + this.gun.power);
+//     this.hp = this.hp + this.armor - (enemy.power + enemy.gun.power);
+//     if (enemy.hp <= 0 && this.dead_number == true) {
+//       console.log(enemy.name + "Öldün");
+//       this.dead_number = false;
+//     } else if (
+//       this.friends.find(function (eleman, index) {
+//         return eleman.name == enemy.name;
+//       })
+//     ) {
+//       this.attack_number++;
+//       if (this.attack_number == 1) {
+//         console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
+//       } else if (this.attack_number == 2) {
+//         console.log("Seni arkadaşlıktan çıkarıyorum.");
+//         this.friends.pop();
+//       }
+//     } else {
+//       enemy.help();
+//     }
+//   },
+//   help: function () {
+//     if (this.hp > 0 && this.hp <= 25) {
+//       console.log("Yardım edin yaralandım.");
+//     }
+//   },
+// };
 
-var jhon = {
-  name: "jhon",
-  friends: [],
-  enemies: [],
-  max_hp: 120,
-  hp: 120,
-  power: 10,
-  gun: revolver,
-  armor: 20,
-  dead_number :1,
-  greet: function (friend) {
-    console.log("Selam sana " + friend.name);
-    this.friends.push(friend.name);
-  },
-  attack: function (enemy) {
-    enemy.hp = (enemy.hp + enemy.armor) - (this.power + this.gun.power);
-    this.hp = (this.hp+this.armor) - (enemy.power+enemy.gun.power);
-    if (enemy.hp <= 0 && this.dead_number==true) {
-      console.log(enemy.name + "Öldün");
-      this.dead_number=false;
-      
-    }  
-    else if(this.friends.find(
-      function(eleman,index){
-        return eleman.name == enemy.name;
-      }
-    ))
-    {
-      this.attack_number++;
-      if(this.attack_number==1){
-        console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
-      }
-      else if (this.attack_number==2){
-        console.log("Seni arkadaşlıktan çıkarıyorum.");
-        this.friends.pop();
-      } 
-    } 
-    else {
-      enemy.help();
-    }
-  },
-  help: function () {
-    if (this.hp > 0 && this.hp <= 25) {
-      console.log("Yardım edin yaralandım.");
-    }
-  },
-};
+// var jhon = {
+//   name: "jhon",
+//   friends: [],
+//   enemies: [],
+//   max_hp: 120,
+//   hp: 120,
+//   power: 10,
+//   gun: revolver,
+//   armor: 20,
+//   dead_number: 1,
+//   greet: function (friend) {
+//     console.log("Selam sana " + friend.name);
+//     this.friends.push(friend.name);
+//   },
+//   attack: function (enemy) {
+//     enemy.hp = enemy.hp + enemy.armor - (this.power + this.gun.power);
+//     this.hp = this.hp + this.armor - (enemy.power + enemy.gun.power);
+//     if (enemy.hp <= 0 && this.dead_number == true) {
+//       console.log(enemy.name + "Öldün");
+//       this.dead_number = false;
+//     } else if (
+//       this.friends.find(function (eleman, index) {
+//         return eleman.name == enemy.name;
+//       })
+//     ) {
+//       this.attack_number++;
+//       if (this.attack_number == 1) {
+//         console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
+//       } else if (this.attack_number == 2) {
+//         console.log("Seni arkadaşlıktan çıkarıyorum.");
+//         this.friends.pop();
+//       }
+//     } else {
+//       enemy.help();
+//     }
+//   },
+//   help: function () {
+//     if (this.hp > 0 && this.hp <= 25) {
+//       console.log("Yardım edin yaralandım.");
+//     }
+//   },
+// };
 
-var messi = {
-  name: "messi",
-  friends: [],
-  enemies: [],
-  max_hp: 100,
-  hp: 5,
-  power: 5,
-  gun: revolver,
-  armor: 20,
-  dead_number :1,
-  greet: function (friend) {
-    console.log("Selam sana " + friend.name);
-    this.friends.push(friend.name);
-  },
-  attack: function (enemy) {
-    enemy.hp = (enemy.hp + enemy.armor) - (this.power + this.gun.power);
-    this.hp = (this.hp+this.armor) - (enemy.power+enemy.gun.power);
-    if (enemy.hp <= 0 && this.dead_number==true) {
-      console.log(enemy.name + "Öldün");
-      this.dead_number=false;
-      
-    } 
-    else if(this.friends.find(
-      function(eleman,index){
-        return eleman.name == enemy.name;
-      }
-    ))
-    {
-      this.attack_number++;
-      if(this.attack_number==1){
-        console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
-      }
-      else if (this.attack_number==2){
-        console.log("Seni arkadaşlıktan çıkarıyorum.");
-        this.friends.pop();
-      } 
-    }
-    else {
-      enemy.help();
-    }
-  },
-  help: function () {
-    if (this.hp > 0 && this.hp <= 25) {
-      console.log("Yardım edin yaralandım.");
-    }
-  },
-};
+// var messi = {
+//   name: "messi",
+//   friends: [],
+//   enemies: [],
+//   max_hp: 100,
+//   hp: 5,
+//   power: 5,
+//   gun: revolver,
+//   armor: 20,
+//   dead_number: 1,
+//   greet: function (friend) {
+//     console.log("Selam sana " + friend.name);
+//     this.friends.push(friend.name);
+//   },
+//   attack: function (enemy) {
+//     enemy.hp = enemy.hp + enemy.armor - (this.power + this.gun.power);
+//     this.hp = this.hp + this.armor - (enemy.power + enemy.gun.power);
+//     if (enemy.hp <= 0 && this.dead_number == true) {
+//       console.log(enemy.name + "Öldün");
+//       this.dead_number = false;
+//     } else if (
+//       this.friends.find(function (eleman, index) {
+//         return eleman.name == enemy.name;
+//       })
+//     ) {
+//       this.attack_number++;
+//       if (this.attack_number == 1) {
+//         console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
+//       } else if (this.attack_number == 2) {
+//         console.log("Seni arkadaşlıktan çıkarıyorum.");
+//         this.friends.pop();
+//       }
+//     } else {
+//       enemy.help();
+//     }
+//   },
+//   help: function () {
+//     if (this.hp > 0 && this.hp <= 25) {
+//       console.log("Yardım edin yaralandım.");
+//     }
+//   },
+// };
 
-var ronaldo = {
-  name: "ronaldo",
-  friends: [],
-  enemies: [],
-  max_hp: 100,
-  hp: 85,
-  power: 35,
-  gun: revolver,
-  armor: 20,
-  dead_number :1,
-  greet: function (friend) {
-    console.log("Selam sana " + friend.name);
-    this.friends.push(friend.name);
-  },
-  attack: function (enemy) {
-    enemy.hp = (enemy.hp + enemy.armor) - (this.power + this.gun.power);
-    this.hp = (this.hp+this.armor) - (enemy.power+enemy.gun.power);
-    if (enemy.hp <= 0 && this.dead_number==true) {
-      console.log(enemy.name + "Öldün");
-      this.dead_number=false;
-      
-    } 
-    else if(this.friends.find(
-      function(eleman,index){
-        return eleman.name == enemy.name;
-      }
-    ))
-    {
-      this.attack_number++;
-      if(this.attack_number==1){
-        console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
-      }
-      else if (this.attack_number==2){
-        console.log("Seni arkadaşlıktan çıkarıyorum.");
-        this.friends.pop();
-      } 
-    }
-    else {
-      enemy.help();
-    }
-  },
-  help: function () {
-    if (this.hp > 0 && this.hp <= 25) {
-      console.log("Yardım edin yaralandım.");
-    }
-  },
-};
+// var ronaldo = {
+//   name: "ronaldo",
+//   friends: [],
+//   enemies: [],
+//   max_hp: 100,
+//   hp: 85,
+//   power: 35,
+//   gun: revolver,
+//   armor: 20,
+//   dead_number: 1,
+//   greet: function (friend) {
+//     console.log("Selam sana " + friend.name);
+//     this.friends.push(friend.name);
+//   },
+//   attack: function (enemy) {
+//     enemy.hp = enemy.hp + enemy.armor - (this.power + this.gun.power);
+//     this.hp = this.hp + this.armor - (enemy.power + enemy.gun.power);
+//     if (enemy.hp <= 0 && this.dead_number == true) {
+//       console.log(enemy.name + "Öldün");
+//       this.dead_number = false;
+//     } else if (
+//       this.friends.find(function (eleman, index) {
+//         return eleman.name == enemy.name;
+//       })
+//     ) {
+//       this.attack_number++;
+//       if (this.attack_number == 1) {
+//         console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
+//       } else if (this.attack_number == 2) {
+//         console.log("Seni arkadaşlıktan çıkarıyorum.");
+//         this.friends.pop();
+//       }
+//     } else {
+//       enemy.help();
+//     }
+//   },
+//   help: function () {
+//     if (this.hp > 0 && this.hp <= 25) {
+//       console.log("Yardım edin yaralandım.");
+//     }
+//   },
+// };
 
-var yattara = {
-  name: "yattara",
-  friends: [],
-  enemies: [],
-  max_hp: 100,
-  hp: 60,
-  power: 15,
-  gun: revolver,
-  armor: 20,
-  dead_number :1,
-  greet: function (friend) {
-    console.log("Selam sana " + friend.name);
-    this.friends.push(friend.name);
-  },
-  attack: function (enemy) {
-    enemy.hp = (enemy.hp + enemy.armor) - (this.power + this.gun.power);
-    this.hp = (this.hp+this.armor) - (enemy.power+enemy.gun.power);
-    if (enemy.hp <= 0 && this.dead_number==true) {
-      console.log(enemy.name + "Öldün");
-      this.dead_number=false;
-      
-    } 
-    else if(this.friends.find(
-      function(eleman,index){
-        return eleman.name == enemy.name;
-      }
-    ))
-    {
-      this.attack_number++;
-      if(this.attack_number==1){
-        console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
-      }
-      else if (this.attack_number==2){
-        console.log("Seni arkadaşlıktan çıkarıyorum.");
-        this.friends.pop();
-      } 
-    }
-    else {
-      enemy.help();
-    }
-  },
-  help: function () {
-    if (this.hp > 0 && this.hp <= 25) {
-      console.log("Yardım edin yaralandım.");
-    }
-  },
-};
+// var yattara = {
+//   name: "yattara",
+//   friends: [],
+//   enemies: [],
+//   max_hp: 100,
+//   hp: 60,
+//   power: 15,
+//   gun: revolver,
+//   armor: 20,
+//   dead_number: 1,
+//   greet: function (friend) {
+//     console.log("Selam sana " + friend.name);
+//     this.friends.push(friend.name);
+//   },
+//   attack: function (enemy) {
+//     enemy.hp = enemy.hp + enemy.armor - (this.power + this.gun.power);
+//     this.hp = this.hp + this.armor - (enemy.power + enemy.gun.power);
+//     if (enemy.hp <= 0 && this.dead_number == true) {
+//       console.log(enemy.name + "Öldün");
+//       this.dead_number = false;
+//     } else if (
+//       this.friends.find(function (eleman, index) {
+//         return eleman.name == enemy.name;
+//       })
+//     ) {
+//       this.attack_number++;
+//       if (this.attack_number == 1) {
+//         console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
+//       } else if (this.attack_number == 2) {
+//         console.log("Seni arkadaşlıktan çıkarıyorum.");
+//         this.friends.pop();
+//       }
+//     } else {
+//       enemy.help();
+//     }
+//   },
+//   help: function () {
+//     if (this.hp > 0 && this.hp <= 25) {
+//       console.log("Yardım edin yaralandım.");
+//     }
+//   },
+// };
 
-arthur.friends.push(jhon);
-arthur.friends.push(ronaldo);
+// arthur.friends.push(jhon);
+// arthur.friends.push(ronaldo);
 
-dutch.friends.push(messi);
-dutch.friends.push(yattara);
+// dutch.friends.push(messi);
+// dutch.friends.push(yattara);
 
-jhon.friends.push(arthur);
-jhon.friends.push(ronaldo);
+// jhon.friends.push(arthur);
+// jhon.friends.push(ronaldo);
 
-ronaldo.friends.push(arthur);
-ronaldo.friends.push(jhon);
-ronaldo.friends.push(yattara);
+// ronaldo.friends.push(arthur);
+// ronaldo.friends.push(jhon);
+// ronaldo.friends.push(yattara);
 
-yattara.friends.push(ronaldo);
-yattara.friends.push(dutch);
+// yattara.friends.push(ronaldo);
+// yattara.friends.push(dutch);
 
-arthur.enemies.push(dutch);
-arthur.enemies.push(messi);
-arthur.enemies.push(yattara);
+// arthur.enemies.push(dutch);
+// arthur.enemies.push(messi);
+// arthur.enemies.push(yattara);
 
-dutch.enemies.push(messi);
-dutch.enemies.push(jhon);
-dutch.enemies.push(ronaldo);
+// dutch.enemies.push(messi);
+// dutch.enemies.push(jhon);
+// dutch.enemies.push(ronaldo);
 
-jhon.enemies.push(yattara);
-jhon.enemies.push(messi);
-jhon.enemies.push(dutch);
+// jhon.enemies.push(yattara);
+// jhon.enemies.push(messi);
+// jhon.enemies.push(dutch);
 
-messi.enemies.push(arthur);
-messi.enemies.push(jhon);
-messi.enemies.push(ronaldo);
-messi.enemies.push(yattara);
+// messi.enemies.push(arthur);
+// messi.enemies.push(jhon);
+// messi.enemies.push(ronaldo);
+// messi.enemies.push(yattara);
 
-ronaldo.enemies.push(messi);
-ronaldo.enemies.push(dutch);
+// ronaldo.enemies.push(messi);
+// ronaldo.enemies.push(dutch);
 
+// arthur.attack(dutch);
+// arthur.attack(dutch);
 
+// arthur.attack(jhon);
+// arthur.attack(jhon);
 
+// jhon.attack(messi);
+// jhon.attack(messi);
 
+// yattara.attack(arthur);
+// yattara.attack(arthur);
+// yattara.attack(arthur);
 
+// ronaldo.attack(jhon);
+// arthur.greet(jhon);
 
+function charFactory(name, age, hp, gunpower, friends) {
+  return {
+    name: name,
+    age: age,
+    hp: hp,
+    gunpower: gunpower,
+    friends: [],
+    ememies: [],
+    attack: (enemy) => {
+      enemy.hp = enemy.hp - this.gunpower;
+    },
+    greet: function (char) {
+      console.log(char.name);
+      this.friends.push(char);
+    },
+    alayinagider: () => {
+      // map(enemies, this.attac(enemy))
+    },
+  };
+}
 
+const yattarklon = charFactory("yattara", 200, 30);
+const arthur = charFactory("arthur", 500, 200);
+const messi = charFactory("messi", 20, 1);
 
-arthur.attack(dutch);
-arthur.attack(dutch);
+// yukarıdaki kodu bu yapıda yenileyelim
+// kendi dizi fonksiyonlarımızı kullanalım
+// tüm düşmanlarına saldıracak
+// tüm düşmanlara saldırdıktan sonra da dostlarına selam ver
 
-arthur.attack(jhon);
-arthur.attack(jhon);
+// 10 soruluk bir test
+// her soru 10 puan
+// geçme notu 70
+// test factory, question factory
+// her sorunun sorusu, her soru cevap şıkları, doğru cevabı ve işaretle methodu(şık seçimi)
+// test objesi soruların hepsini teker teker kontrol edip puanı hesaplar
+// eğer geçme notunun üzerinde puan aldıysa tebrikler almamışsa wasted!
 
+function questionFactory(soru, puan, cevaplar, dogrucevap) {
+  return {
+    soru: soru,
+    secilenShick: "",
+    puan: puan,
+    cevapar: cevaplar,
+    dogrucevap: dogrucevap,
+    isaretle: () => {
+      this.secilenShick = 2;
+    },
+  };
+}
 
-
-
-
-jhon.attack(messi);
-jhon.attack(messi);
-
-yattara.attack(arthur);
-yattara.attack(arthur);
-yattara.attack(arthur);
-
-ronaldo.attack(jhon);
-arthur.greet(jhon);
+const questions = [
+  questionFactory("soru metni", 10, ["", "", "", ""], 2),
+  questionFactory("soru metni", 10, ["", "", "", ""], 2),
+  questionFactory("soru metni", 10, ["", "", "", ""], 2),
+  questionFactory("soru metni", 10, ["", "", "", ""], 2),
+  questionFactory("soru metni", 10, ["", "", "", ""], 2),
+  questionFactory("soru metni", 10, ["", "", "", ""], 2),
+];
