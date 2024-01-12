@@ -328,62 +328,73 @@
 // ronaldo.attack(jhon);
 // arthur.greet(jhon);
 
-function charFactory(name, age, hp, gunpower, friends) {
+function characterMaker(name, hp, armor,  power, gunpower ) {
   return {
     name: name,
-    age: age,
-    hp: hp,
-    gunpower: gunpower,
     friends: [],
-    ememies: [],
+    enemies: [],
+    hp: hp,
+    armor:armor,
+    power:power,
+    gunpower: gunpower,
+    dead_number :true,
+    attack_number:0,
+    greet: function (friend) {
+      console.log(" Selam sana " + friend.name );
+      this.friends.push(friend.name);
+    },
     attack: (enemy) => {
-      enemy.hp = enemy.hp - this.gunpower;
-    },
-    greet: function (char) {
-      console.log(char.name);
-      this.friends.push(char);
-    },
-    alayinagider: () => {
-      // map(enemies, this.attac(enemy))
-    },
+      enemy.hp = enemy.hp + enemy.armor - (this.power + this.gunpower);
+      enemy.attack(this);
+      if (enemy.hp <= 0 && this.dead_number == true) {
+          console.log(enemy.name + "Öldün");
+          this.dead_number = false;
+      }
+      else if (
+            this.friends.find(function (eleman, index) {
+            return eleman.name == enemy.name;
+               })
+             ) {
+            this.attack_number++;
+            if (this.attack_number == 1) {
+              console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
+            } else if (this.attack_number == 2) {
+              console.log("Seni arkadaşlıktan çıkarıyorum.");
+                this.friends.pop();
+            }
+            }
+            else {
+              enemy.help();
+            }
+          },
+    help: function () {
+        if (this.hp > 0 && this.hp <= 25) {
+          console.log("Yardım edin yaralandım.");
+        }
+      },
+    allAttackandallHello: (enemy,friend) => {
+        for (let i = 0; i < enemy.length; i++) {
+            this.attack(enemy[i]);
+        }
+        for (let j = 0; j <friend.length;j++){
+            console.log("Selam sana " + friend[i]);
+        } 
+      
+      },
+    }
+     
   };
-}
 
-const yattarklon = charFactory("yattara", 200, 30);
-const arthur = charFactory("arthur", 500, 200);
-const messi = charFactory("messi", 20, 1);
+
+const yattarklon = characterMaker("yattara", 200, 20,40,10);
+const arthur = characterMaker("arthur", 500, 20,50,10);
+const messi = characterMaker("messi", 20, 1,10,10);
+const jhon = characterMaker("jhon", 120, 10,40,10);
+const dutch = characterMaker("dutch", 100,30,10,10);
+
 
 // yukarıdaki kodu bu yapıda yenileyelim
 // kendi dizi fonksiyonlarımızı kullanalım
 // tüm düşmanlarına saldıracak
 // tüm düşmanlara saldırdıktan sonra da dostlarına selam ver
 
-// 10 soruluk bir test
-// her soru 10 puan
-// geçme notu 70
-// test factory, question factory
-// her sorunun sorusu, her soru cevap şıkları, doğru cevabı ve işaretle methodu(şık seçimi)
-// test objesi soruların hepsini teker teker kontrol edip puanı hesaplar
-// eğer geçme notunun üzerinde puan aldıysa tebrikler almamışsa wasted!
-
-function questionFactory(soru, puan, cevaplar, dogrucevap) {
-  return {
-    soru: soru,
-    secilenShick: "",
-    puan: puan,
-    cevapar: cevaplar,
-    dogrucevap: dogrucevap,
-    isaretle: () => {
-      this.secilenShick = 2;
-    },
-  };
-}
-
-const questions = [
-  questionFactory("soru metni", 10, ["", "", "", ""], 2),
-  questionFactory("soru metni", 10, ["", "", "", ""], 2),
-  questionFactory("soru metni", 10, ["", "", "", ""], 2),
-  questionFactory("soru metni", 10, ["", "", "", ""], 2),
-  questionFactory("soru metni", 10, ["", "", "", ""], 2),
-  questionFactory("soru metni", 10, ["", "", "", ""], 2),
-];

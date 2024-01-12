@@ -6,7 +6,7 @@ dizi.push("Amine");
 dizi.push("İlhan");
 dizi.pop();
 
-/*
+/*-
 function find(isim,dizi){
     for (let i = 0; i < dizi.length; i++) {
         if(dizi[i]==isim){
