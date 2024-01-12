@@ -328,73 +328,70 @@
 // ronaldo.attack(jhon);
 // arthur.greet(jhon);
 
-function characterMaker(name, hp, armor,  power, gunpower ) {
-  return {
-    name: name,
-    friends: [],
-    enemies: [],
-    hp: hp,
-    armor:armor,
-    power:power,
-    gunpower: gunpower,
-    dead_number :true,
-    attack_number:0,
-    greet: function (friend) {
-      console.log(" Selam sana " + friend.name );
-      this.friends.push(friend.name);
-    },
-    attack: (enemy) => {
-      enemy.hp = enemy.hp + enemy.armor - (this.power + this.gunpower);
-      enemy.attack(this);
-      if (enemy.hp <= 0 && this.dead_number == true) {
-          console.log(enemy.name + "Öldün");
-          this.dead_number = false;
-      }
-      else if (
-            this.friends.find(function (eleman, index) {
-            return eleman.name == enemy.name;
-               })
-             ) {
-            this.attack_number++;
-            if (this.attack_number == 1) {
-              console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
-            } else if (this.attack_number == 2) {
-              console.log("Seni arkadaşlıktan çıkarıyorum.");
-                this.friends.pop();
-            }
-            }
-            else {
-              enemy.help();
-            }
-          },
-    help: function () {
-        if (this.hp > 0 && this.hp <= 25) {
-          console.log("Yardım edin yaralandım.");
-        }
-      },
-    allAttackandallHello: (enemy,friend) => {
-        for (let i = 0; i < enemy.length; i++) {
-            this.attack(enemy[i]);
-        }
-        for (let j = 0; j <friend.length;j++){
-            console.log("Selam sana " + friend[i]);
-        } 
-      
-      },
-    }
-     
-  };
+// function characterMaker(name, hp, armor,  power, gunpower ) {
+//   return {
+//     name: name,
+//     friends: [],
+//     enemies: [],
+//     hp: hp,
+//     armor:armor,
+//     power:power,
+//     gunpower: gunpower,
+//     dead_number :true,
+//     attack_number:0,
+//     greet: function (friend) {
+//       console.log(" Selam sana " + friend.name );
+//       this.friends.push(friend.name);
+//     },
+//     attack: (enemy) => {
+//       enemy.hp = enemy.hp + enemy.armor - (this.power + this.gunpower);
+//       enemy.attack(this);
+//       if (enemy.hp <= 0 && this.dead_number == true) {
+//           console.log(enemy.name + "Öldün");
+//           this.dead_number = false;
+//       }
+//       else if (
+//             this.friends.find(function (eleman, index) {
+//             return eleman.name == enemy.name;
+//                })
+//              ) {
+//             this.attack_number++;
+//             if (this.attack_number == 1) {
+//               console.log("Seni uyarıyorum ben senin arkadaşınım bana saldırma.");
+//             } else if (this.attack_number == 2) {
+//               console.log("Seni arkadaşlıktan çıkarıyorum.");
+//                 this.friends.pop();
+//             }
+//             }
+//             else {
+//               enemy.help();
+//             }
+//           },
+//     help: function () {
+//         if (this.hp > 0 && this.hp <= 25) {
+//           console.log("Yardım edin yaralandım.");
+//         }
+//       },
+//     allAttackandallHello: (enemy,friend) => {
+//         for (let i = 0; i < enemy.length; i++) {
+//             this.attack(enemy[i]);
+//         }
+//         for (let j = 0; j <friend.length;j++){
+//             console.log("Selam sana " + friend[i]);
+//         }
 
+//       },
+//     }
 
-const yattarklon = characterMaker("yattara", 200, 20,40,10);
-const arthur = characterMaker("arthur", 500, 20,50,10);
-const messi = characterMaker("messi", 20, 1,10,10);
-const jhon = characterMaker("jhon", 120, 10,40,10);
-const dutch = characterMaker("dutch", 100,30,10,10);
+//   };
 
+// const yattarklon = characterMaker("yattara", 200, 20,40,10);
+// const arthur = characterMaker("arthur", 500, 20,50,10);
+// const messi = characterMaker("messi", 20, 1,10,10);
+// const jhon = characterMaker("jhon", 120, 10,40,10);
+// const dutch = characterMaker("dutch", 100,30,10,10);
 
 // yukarıdaki kodu bu yapıda yenileyelim
 // kendi dizi fonksiyonlarımızı kullanalım
 // tüm düşmanlarına saldıracak
 // tüm düşmanlara saldırdıktan sonra da dostlarına selam ver
-
