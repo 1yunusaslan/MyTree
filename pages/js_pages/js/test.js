@@ -345,7 +345,7 @@ function Charactermaker(name, hp, armor,  power, gunpower ) {
     };
    this.attack= (enemy) => {
       enemy.hp = enemy.hp + enemy.armor - (this.power + this.gunpower);
-      enemy.attack(this);
+      //enemy.attack(this);
       if (enemy.hp <= 0 && this.dead_number == true) {
           console.log(enemy.name + "Öldün");
           this.dead_number = false;
@@ -379,18 +379,49 @@ function Charactermaker(name, hp, armor,  power, gunpower ) {
         for (let j = 0; j <friend.length;j++){
             console.log("Selam sana " + friend[i]);
         } 
-      
       };
   };
      
+
+
+  const satir = [1,2,3,4];
+  const birinci_satir = ["A","B","C"];
+  const ikinci_satir = ["B","C","D"];
+  const ucuncu_satir = ["C","D","E"];
+  const stun = [11,2,13,14];
+
+  function eleman_bul  (satir_numarasi,stun_numarasi) {
+    const str = satir[satir_numarasi];
+    const stn =  stun[stun_numarasi];
+
+    if (str===stn) {
+      return str;
+    }
+    else {
+      return null;
+    }
+    }
+
+
+  const snc_deger=eleman_bul(2,2);
+  console.log(snc_deger);
+
+  
+    
+    
   
 
 
-const yattarklon = Charactermaker("yattara", 200, 20,40,10);
-const arthur = Charactermaker("arthur", 500, 20,50,10);
-const messi = Charactermaker("messi", 20, 1,10,10);
-const jhon = Charactermaker("jhon", 120, 10,40,10);
-const dutch = Charactermaker("dutch", 100,30,10,10);
+  
 
+
+const yattarklon = new Charactermaker("yattara", 200, 20,40,10);
+const arthur = new Charactermaker("arthur", 500, 20,50,10);
+const messi = new Charactermaker("messi", 20, 1,10,10);
+const jhon = new Charactermaker("jhon", 120, 10,40,10);
+const dutch = new Charactermaker("dutch", 100,30,10,10);
+const arthur_friends = [jhon,yattarklon];
+arthur.attack(messi);
+arthur.friends.push(arthur_friends);
 
 
