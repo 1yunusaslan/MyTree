@@ -328,22 +328,22 @@
 // ronaldo.attack(jhon);
 // arthur.greet(jhon);
 
-function characterMaker(name, hp, armor,  power, gunpower ) {
-  return {
-    name: name,
-    friends: [],
-    enemies: [],
-    hp: hp,
-    armor:armor,
-    power:power,
-    gunpower: gunpower,
-    dead_number :true,
-    attack_number:0,
-    greet: function (friend) {
+function Charactermaker(name, hp, armor,  power, gunpower ) {
+  
+  this.name = name;
+  this.friends= [];
+  this.enemies= [];
+  this.hp= hp;
+  this.armor=armor;
+  this.power=power;
+  this.gunpower= gunpower;
+  this.dead_number =true;
+  this.attack_number=0;
+  this.greet=function (friend) {
       console.log(" Selam sana " + friend.name );
       this.friends.push(friend.name);
-    },
-    attack: (enemy) => {
+    };
+   this.attack= (enemy) => {
       enemy.hp = enemy.hp + enemy.armor - (this.power + this.gunpower);
       enemy.attack(this);
       if (enemy.hp <= 0 && this.dead_number == true) {
@@ -367,12 +367,12 @@ function characterMaker(name, hp, armor,  power, gunpower ) {
               enemy.help();
             }
           },
-    help: function () {
+   this.help=function () {
         if (this.hp > 0 && this.hp <= 25) {
           console.log("Yardım edin yaralandım.");
         }
-      },
-    allAttackandallHello: (enemy,friend) => {
+      };
+   this.allAttackandallHello= (enemy,friend) => {
         for (let i = 0; i < enemy.length; i++) {
             this.attack(enemy[i]);
         }
@@ -380,10 +380,10 @@ function characterMaker(name, hp, armor,  power, gunpower ) {
             console.log("Selam sana " + friend[i]);
         } 
       
-      },
-    }
-     
+      };
   };
+     
+  
 
 
 const yattarklon = characterMaker("yattara", 200, 20,40,10);
@@ -393,8 +393,4 @@ const jhon = characterMaker("jhon", 120, 10,40,10);
 const dutch = characterMaker("dutch", 100,30,10,10);
 
 
-// yukarıdaki kodu bu yapıda yenileyelim
-// kendi dizi fonksiyonlarımızı kullanalım
-// tüm düşmanlarına saldıracak
-// tüm düşmanlara saldırdıktan sonra da dostlarına selam ver
 
