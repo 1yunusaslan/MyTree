@@ -386,11 +386,11 @@ function Charactermaker(name, hp, armor,  power, gunpower ) {
   
 
 
-const yattarklon = characterMaker("yattara", 200, 20,40,10);
-const arthur = characterMaker("arthur", 500, 20,50,10);
-const messi = characterMaker("messi", 20, 1,10,10);
-const jhon = characterMaker("jhon", 120, 10,40,10);
-const dutch = characterMaker("dutch", 100,30,10,10);
+const yattarklon = Charactermaker("yattara", 200, 20,40,10);
+const arthur = Charactermaker("arthur", 500, 20,50,10);
+const messi = Charactermaker("messi", 20, 1,10,10);
+const jhon = Charactermaker("jhon", 120, 10,40,10);
+const dutch = Charactermaker("dutch", 100,30,10,10);
 
 
 
