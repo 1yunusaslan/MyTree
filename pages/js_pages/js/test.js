@@ -384,28 +384,6 @@ function Charactermaker(name, hp, armor,  power, gunpower ) {
      
 
 
-  const satir = [1,2,3,4];
-  const birinci_satir = ["A","B","C"];
-  const ikinci_satir = ["B","C","D"];
-  const ucuncu_satir = ["C","D","E"];
-  const stun = [11,2,13,14];
-
-  function eleman_bul  (satir_numarasi,stun_numarasi) {
-    const str = satir[satir_numarasi];
-    const stn =  stun[stun_numarasi];
-
-    if (str===stn) {
-      return str;
-    }
-    else {
-      return null;
-    }
-    }
-
-
-  const snc_deger=eleman_bul(2,2);
-  console.log(snc_deger);
-
   
     
     
