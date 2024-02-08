@@ -8,10 +8,10 @@ console.log(position_fruit);
 //LastIndexOf
 
 const fruits_2 = ["Elma","Armut","Armut","Mandalina","Ayva","Limon","Kiraz"];
-let position_fruit_2= fruits_2.lastIndexOf("Elma");
+let position_fruit_2= fruits_2.lastIndexOf("Armut");
 console.log(position_fruit_2);
 
-//Includes
+//Includes***
 
 const fruits_3 = ["Elma","Armut","Mandalina","Limon","Kiraz"];
 let check = fruits_3.includes("Elma");

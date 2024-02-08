@@ -4,21 +4,22 @@ const numbers = [1,2,10,20,40,50,70,100,110,116];
 
 let text = "";
 numbers.forEach(writeValue);
-//document.getElementById("numbers").innerHTML = text;
-function writeValue(value) {
+document.getElementById("numbers").innerHTML = text;
+function writeValue(value,index) {
   text += value + "<br>";
+   
 }
 console.log(numbers);
 
 //Map
 
-const numbers_carp= numbers.map(numbersCarp);
-//document.getElementById("numbers2").innerHTML = numbers_carp;
-function numbersCarp (value) { 
-    return value*2;
-}
+// const numbers_carp= numbers.map(numbersCarp);
+// //document.getElementById("numbers2").innerHTML = numbers_carp;
+// function numbersCarp (value) { 
+//     return value*2;
+// }
 
-console.log(numbers_carp);
+//console.log(numbers_carp);
 
 //Filter
 
@@ -30,17 +31,17 @@ function numbersFilter (value) {
 }
 console.log(numbers_filter);
 
-//Reduce ( tek bir değer döndürür, her bir dizi öğesi üzerinde çalışır.)
+//Reduce**** ( tek bir değer döndürür, her bir dizi öğesi üzerinde çalışır.)
 
 const numbers_sum= numbers.reduce(numbersSum);
 function numbersSum (total,value) {  
     return total + value;
 }
-console.log(numbers_sum)
+console.log(numbers_sum);
 
 //Every (Burayı sor)
 
-const numbers2 = [9,21,10,20,40,50,70,100,110,116];
+const numbers2 = [11,21,12,20,40,50,70,100,110,116];
 const numbers_every = numbers2.every(myEvery);
 
 function myEvery(value) {  
@@ -85,7 +86,7 @@ for(let y of fruits_entries){
 const fruits_with = fruits.with(1,"Armutlar");
 console.log(fruits_with);
 
-//Spread 
+//Spread******** 
 
 const s1= [1,2,3,4];
 const s2= [5,6,7,8];
