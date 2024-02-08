@@ -1,13 +1,17 @@
 const tablo = [
-  ["*", 1, 8, 9, 10, 11],
-  ["*", 800, 64, 72, 80, 88],
-  ["*", 900, 72, 81, 90, 99],
-  ["*", 1000, 80, 90, 100, 110],
+  [    , 8, 9, 10, 11],
+  [ 800,64, 72, 80, 88],
+  [ 900, 72, 81, 90, 99],
+  [ 1000, 80, 90, 100, 110],
 ];
 
+
+
+
 function getIntersection(satirno, sütunno) {
-  return tablo[satirno][sütunno];
+  return tablo[satirno-1][sütunno-1];
 }
+console.log(getIntersection(2,3));
 
 function findItem(target) {
   for (let index = 0; index < tablo.length; index++) {
@@ -28,10 +32,6 @@ const tablo2 = [
   [3, 5, 4, 5, 2],
 ];
 
-for (let i = 0; i < tablo2.length; i++) {
-  const satir = tablo2[i];
-  satir.find((eleman) => eleman == satir[sutunindex]);
-}
 
 function findValuee() {
   const satir_deger = document.getElementById("satir_number").value;
