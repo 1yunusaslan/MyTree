@@ -1,0 +1,45 @@
+
+body{
+  font-family:'Raleway';
+}
+
+h2{
+  font-size: 50px !important;  
+}
+
+
+
+#iletisim a{
+  color: teal;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#iletisim a:hover{
+  text-decoration:underline ;
+}
+
+#cookie{
+  background-color: black;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 0px;
+  z-index: 1;
+  display: none;
+}
+
+#cookie-kapat{
+  color: white;
+  text-align: right;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .carousel-wrapper {
+    margin-top: 10px;
+    height: 700px;
+    overflow: hidden;
+  }
+}
+
