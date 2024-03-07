@@ -4,48 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuleport</title>
-    <!-- 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+   
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
-     -->
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+   
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+     <!----- boostrap dosyasını css dosyasından önce çalıştırmam gerekiyor. (Font sorunu)-->
     <link rel="stylesheet" href="./fonts/font.css">
-    <link rel="icon" href="./images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
 
+    <link rel="icon" href="./images/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
-<body  data-bs-spy="scroll" data-bs-target="#navbar_scrollspy" data-bs-offset="0" data-bs-smooth-scroll="true">
-    <div class="container-main" >
-        <nav  id="navbar_scrollspy" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-            <div class="container-fluid">
-                <img src="./images/logo.png" alt="" style="width: 100px;">
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+<body data-bs-spy="scroll" data-bs-target="#kb-navbar" data-bs-offset="-200" style="position: relative;">
+    <nav id="kp-navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm px-3">
+        <a href="#kp-carousel" class="navbar-brand">
+            <img src="./images/logo.png" alt="" style="width: 100px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#hakkimizda">Hakkımızda </a>
+                <a class="nav-item nav-link" href="#proje">Proje Detayları</a>
+                <a class="nav-item nav-link" href="#iletisim">İletişim</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" >
+
+      
+
+
+
+<!-- 
+            <nav id="kb_navbar" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <a href="#kb_carousel" class="navbar-brand">
+                    <img src="./images/logo.png" alt="" style="width: 100px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="navbar-collapse collapse" id="navbarSupportedContent" >
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#hakkimizda">Hakkımızda</a>
-                </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#proje">Proje Detayları</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#iletisim">İletişim</a>
-                  </li>   
-                </ul>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#hakkimizda">Hakkımızda </a>
+                    <a class="nav-item nav-link" href="#proje">Proje Detayları</a>
+                    <a class="nav-item nav-link" href="#iletisim">İletişim</a>
+                </div>
               </div>
-            </div>
-        </nav>
+            </nav> -->
+        
+        
 
         <div class="carousel-wrapper">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -64,7 +77,7 @@
         </div>
 
         <div class="container">
-            <div id="hakkimizda" class="row   justify-content-center  p-3">
+            <div id="hakkimizda" class="row justify-content-center p-3" style="height: 441px;">
                 <div class="col-auto">
                     <h1 class="my-5">Hakkımızda</h1>
                 </div>
@@ -86,7 +99,7 @@
                     dizayn etmektedir.
                 </p>
             </div>
-            <div id="proje">
+            <div id="proje" style="height: 4213px;">
                 <h1 class=" my-5" > Proje Özellikleri</h1>
                 <hr>
                 <div class="row py-5">
@@ -255,55 +268,27 @@
                 </div> 
             </div>
         </div>
-        <div id="iletisim" class="row  bg-dark py-3 mt-5">
+        
+        <div id="iletisim" class="row  bg-dark py-3"  style="height: 226px;">
             <div class="col-12">
-                <div class=" row">
-                    <div class="text-center text-light">
-                        <strong>Ataşehir Güney</strong>
-                         <hr>
-                    </div>
-                </div>
-               
-                <div class=" row">
-                    <div class="text-center text-light">
-                        <strong>Barbaros Mahallesi, Mor Sümbül Sokak</strong>
-                        <br>
-                        <strong>No:7/3 34746 Ataşehir/İSTANBUL</strong>
-                        <br>
-                        <strong> 444 4 846</strong>
-                    </div>
-                </div>
+                <form class="text-center text-light">
+                    <address>
+                        <strong>Ataşehir Güney</strong><br>
+                        <hr>
+                        Barbaros Mahallesi, Mor Sümbül Sokak<br>
+                        No:7/3 34746 Ataşehir/İSTANBUL<br>
 
-                <div class="row mt-3">
-                    <div class="text-center text-light">
+                        444 4 846
+                    </address>
+                    <address>
                         <a href="mailto:info@kuleport.com">info@kuleport.com</a>
-                        <hr> 
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="text-center text-light">
-                        <a target="_blank" href="./cookie_policy.pdf">KVKK bilgilendirme metni için buraya tıklayınız.</a>
-                    </div>
-                </div>
+                    </address>
+                    <hr>
+                    <a target="_blank" href="./cookie_policy.pdf">KVKK bilgilendirme metni için buraya tıklayınız.</a>
+                </form>   
             </div>
         </div>
 
-        <div id="cookie" class="row  bg-dark py-5">
-            <div class="col-12">
-                <p id="cookie-kapat" class="  position-absolute top-0 end-0  px-5" >X</p>
-            </div>
-            <div class="col-12">
-                <p class="text-light px-5 ">
-                    Çerez politikası; Sizlere daha iyi bir hizmet sunabilmek için
-                    sitemizde çerez konumlandırmaktayız. Kullanmaya devam ettiğinizde
-                    çerezler ile toplanan kişisel verileriniz veri
-                    politikamız-bilgilendirmelerimizde belirtilen amaçlar ve yöntemlerle
-                    mevzuata uygun olarak kullanılacaktır,
-                    <a target="_blank" href="./cookie_policy.pdf">bilgilendirme metni için buraya tıklayınız.</a>
-                </p>
-            </div>
-        </div>
     </div>
 
 
