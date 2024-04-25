@@ -1,11 +1,9 @@
 
-
-
-
 const dizi = [
     {
         ad:'Ana Sayfa',
-        href:'index'
+        href:'index',
+       
         
     },
     {
