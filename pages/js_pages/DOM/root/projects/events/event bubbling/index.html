@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event bubbling</title>
+</head>
+<body>
+    <div id="parent" style="padding: 20px; background-color: lightblue;">
+        Parent
+        <button id="child">Click Me</button>
+    </div>
+
+
+    <script>
+
+        document.getElementById('parent').addEventListener('click', function() {
+            alert('Parent clicked!');
+        });
+
+        document.getElementById('child').addEventListener('click', function(event) {
+            alert('Child clicked!');
+            event.stopPropagation(); // bubbling durdurma 
+        });
+
+
+    </script>
+</body>
+</html>
